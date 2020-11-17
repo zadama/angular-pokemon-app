@@ -1,0 +1,11 @@
+<div id="loader">loading....</div>
+
+<ul>
+  <li
+    (click)="onPokemonClicked(pokemon)"
+    *ngFor="let pokemon of pokemons; let index = index"
+  >
+    {{ pokemon.name }}
+    <img [src]="pokemon.image" [alt]="pokemon.name" />
+  </li>
+</ul>

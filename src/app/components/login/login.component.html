@@ -1,0 +1,15 @@
+<form>
+  <div>
+    <label>Username : </label>
+    <input
+      [(ngModel)]="trainer.username"
+      type="text"
+      placeholder="Enter Username"
+      name="username"
+      required
+    />
+    <button type="button" (click)="onUsernameEntered()">Login</button>
+  </div>
+</form>
+
+<h1>{{ trainer.username }}</h1>
