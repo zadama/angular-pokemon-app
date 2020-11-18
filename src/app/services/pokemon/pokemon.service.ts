@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { PokemonInfo } from '../../models/pokemon-info.model';
 
 // Get all Pokemons & get individual pokemons by url/id...
 
@@ -18,7 +17,11 @@ export class PokemonService {
       .toPromise();
   }
 
-  getPokemonById(id: number): Promise<PokemonInfo> {
+  getPokemonById(id: number): Promise<any> {
     return this.http.get(this.BASE_URL + 'pokemon/' + id).toPromise();
+  }
+
+  getSpeciesById(id: number): Promise<any> {
+    return this.http.get(this.BASE_URL + 'pokemon-species/' + id).toPromise();
   }
 }

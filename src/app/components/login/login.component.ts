@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Trainer } from '../../models/trainer.model';
 import { TrainerService } from '../../services/trainer/trainer.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,15 +8,19 @@ import { TrainerService } from '../../services/trainer/trainer.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  public trainer: Trainer = {
+  public trainer: any = {
     username: '',
   };
-  constructor(private trainerService: TrainerService) {}
+  constructor(private trainerService: TrainerService, private router: Router) {}
 
   onUsernameEntered() {
-    console.log(this.trainer.username + ' entered');
+    if (this.trainer.username === '' || this.trainer.username == null) {
+      alert("Please enter a username. Don't leave this field empty.");
+      return;
+    }
 
-    // call login with username to save it. Maybe do some validation before?
+    this.trainerService.login(this.trainer.username);
+    this.router.navigateByUrl('/pokemons');
   }
   ngOnInit(): void {}
 }

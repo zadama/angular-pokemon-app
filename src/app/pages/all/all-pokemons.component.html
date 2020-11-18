@@ -1,11 +1,11 @@
+<app-navbar></app-navbar>
+
 <div id="loader">loading....</div>
 
-<ul>
-  <li
-    (click)="onPokemonClicked(pokemon)"
+<div class="pokemons-container">
+  <app-pokemon-card
     *ngFor="let pokemon of pokemons; let index = index"
-  >
-    {{ pokemon.name }}
-    <img [src]="pokemon.image" [alt]="pokemon.name" />
-  </li>
-</ul>
+    [pokemon]="pokemon"
+    (onChangeRoute)="onPokemonClicked($event)"
+  ></app-pokemon-card>
+</div>

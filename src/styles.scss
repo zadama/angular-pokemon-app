@@ -21,6 +21,7 @@ button {
   padding-right: 15px;
   padding-left: 15px;
   margin: 0 auto;
+  margin-bottom: 20px;
 
   @media (min-width: 576px) {
     max-width: 540px;
@@ -41,4 +42,9 @@ button {
   @media (min-width: 1400px) {
     max-width: 1320px;
   }
+}
+
+body {
+  background: white;
+  background: linear-gradient(to right, #d0ece7, #edeed8);
 }

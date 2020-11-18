@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class AllPokemonsComponent implements OnInit {
   public pokemons: any = [];
   private IMAGE_BASE_URL: string =
-    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/';
+    'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 
   constructor(private pokemonService: PokemonService, private router: Router) {}
 
