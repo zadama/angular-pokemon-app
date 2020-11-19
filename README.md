@@ -1,5 +1,10 @@
 # PokemonTask
 
+## About
+
+This is a web application built using the Angular framework.
+It is a pokémon catalogue which the user can gain access to by "logging in" (entering a username). Clicking a pokémon will desplay a details page, where the user can collect the specific pokémon. All data comes from the Pokémon API: https://pokeapi.co/
+
 Demo: https://angular-pokemon-app.herokuapp.com/
 
 ## Development server
@@ -25,3 +30,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Authors
+Aman Zadran and Beatrice Asplund
